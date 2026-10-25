@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0f1c;
+  --color-foreground: #ffffff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,30%,0.1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(339,49%,30%,0.1) 0, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Scrollbar for Pre blocks */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(79, 70, 229, 0.5);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 70, 229, 0.8);
+}
